@@ -18,11 +18,18 @@
 	</pracownicy>
 	<wypożyczenia>
 		<wypożyczenie>
-			<pracownik> </pracownik>
-			<samochód> </samochód>
-			<data_wypożyczenia></data_wypożyczenia>
-			<data_zwrotu> </data_zwrotu>
-			<wypożyczający imie="" nazwisko="" pesel="" nr_telefonu=""/>
+			<pracownik id="JK1"> </pracownik>
+			<samochód id="CH1"> </samochód>
+			<data_wypożyczenia>03.10.2016</data_wypożyczenia>
+			<data_zwrotu>11.11.2016</data_zwrotu>
+			<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="512-324-456"/>
+		</wypożyczenie>
+		<wypożyczenie>
+			<pracownik id="AG1"> </pracownik>
+			<samochód id="MF1"> </samochód>
+			<data_wypożyczenia>21.8.2016</data_wypożyczenia>
+			<data_zwrotu>12.12.2016</data_zwrotu>
+			<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="756-459-785"/>
 		</wypożyczenie>
 	</wypożyczenia>
 	<samochody>
@@ -35,8 +42,9 @@
 			<przebieg jednostka="km">140598</przebieg>
 			<rok_produkcji>2007</rok_produkcji>
 			<kolor>czekoladowy</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
+			<czy_wypożyczone>tak</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">47.50</cena_wypożyczenia_za_1_dzien>
+			<miasto>Łódź</miasto>
 		</samochód>
 		<samochód id="AM1">
 			<nazwa>
@@ -47,8 +55,9 @@
 			<przebieg>250547</przebieg>
 			<rok_produkcji>2010</rok_produkcji>
 			<kolor>srebrny</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
+			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>99.99</cena_wypożyczenia_za_1_dzien>
+			<miasto>Warszawa</miasto>
 		</samochód>
 		<samochód id="VO1">
 			<nazwa>
@@ -61,6 +70,7 @@
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>35.75</cena_wypożyczenia_za_1_dzien>
+			<miasto>Łódź</miasto>
 		</samochód>
 		<samochód id="IS1">
 			<nazwa>
@@ -73,6 +83,7 @@
 			<kolor>czerwony</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>150.00</cena_wypożyczenia_za_1_dzien>
+			<miasto>Warszawa</miasto>
 		</samochód>
 		<samochód id="AO1">
 			<nazwa>
@@ -85,6 +96,7 @@
 			<kolor>niebieski</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>70.85</cena_wypożyczenia_za_1_dzien>
+			<miasto>Łódź</miasto>
 		</samochód>
 		<samochód id="PF1">	
 			<nazwa>
@@ -95,8 +107,9 @@
 			<przebieg>180043</przebieg>
 			<rok_produkcji>2003</rok_produkcji>
 			<kolor>biały</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
+			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>35.83</cena_wypożyczenia_za_1_dzien>
+			<miasto>Łódź</miasto>
 		</samochód>
 		<samochód id="FF1">	
 			<nazwa>
@@ -107,8 +120,9 @@
 			<przebieg>90000</przebieg>
 			<rok_produkcji>2011</rok_produkcji>
 			<kolor>granatowy</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
+			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>60.45</cena_wypożyczenia_za_1_dzien>
+			<miasto>Warszawa</miasto>
 		</samochód>
 		<samochód id="YT1">	
 			<nazwa>
@@ -119,8 +133,9 @@
 			<przebieg>98534</przebieg>
 			<rok_produkcji>2006</rok_produkcji>
 			<kolor>zielony</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
+			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>25.78</cena_wypożyczenia_za_1_dzien>
+			<miasto>Wrocław</miasto>
 		</samochód>
 		<samochód id="MF1">	
 			<nazwa>
@@ -133,6 +148,7 @@
 			<kolor>srebrny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>30.35</cena_wypożyczenia_za_1_dzien>
+			<miasto>Wrocław</miasto>
 		</samochód>
 		<samochód id="CM1">	
 			<nazwa>
@@ -145,6 +161,7 @@
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>130.43</cena_wypożyczenia_za_1_dzien>
+			<miasto>Warszawa</miasto>
 		</samochód>
 		<samochód id="MF1">	
 			<nazwa>
@@ -157,8 +174,9 @@
 			<przebieg>40000</przebieg>
 			<rok_produkcji>2015</rok_produkcji>
 			<kolor>biały</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
+			<czy_wypożyczone>tak</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>250.69</cena_wypożyczenia_za_1_dzien>
+			<miasto>Warszawa</miasto>
 		</samochód>
 		<samochód id="1F1">	
 			<nazwa>
@@ -171,6 +189,7 @@
 			<kolor>żółty</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien>150.90</cena_wypożyczenia_za_1_dzien>
+			<miasto>Wrocław</miasto>
 		</samochód>
 	</samochody>
 </wypożyczalnia>
