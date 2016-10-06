@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="zadanie1.css"?>
-
 <wypożyczalnia>
+	<opis>
+		<temat>Wypożyczalnia Samochodowa</temat>
+		<autorzy>
+			<autor imie="Łukasz" nazwisko="Zimoń" nr_indexu="195753"/>
+			<autor imie="Przemysław" nazwisko="Gęsieniec" nr_indexu="195591"/>
+		</autorzy>
+	</opis>
  	<pracownicy>
 		<pracownik id="JK1">
 			<imie>Jan</imie>

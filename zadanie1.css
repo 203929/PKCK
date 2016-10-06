@@ -1,4 +1,35 @@
-samochód
+*
+{
+	margin: 5pt 5pt 5pt 5pt;
+}
+
+opis, samochód, wypożyczenie
 {
 	display: block;
+}
+
+wypożyczenie > pracownik, wypożyczenie > samochód
+{
+	display: inline;
+}
+
+pracownik
+{
+	display: list-item;
+	margin-left: 10pt;
+}
+
+autor
+{
+	display: inline;
+}
+
+autor:before
+{
+	content: attr(imie) " " attr(nazwisko) " " attr(nr_indexu); 
+}
+
+wypożyczający:before
+{
+	
 }
