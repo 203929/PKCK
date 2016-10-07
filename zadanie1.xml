@@ -175,8 +175,6 @@
 				<marka>Ford</marka>
 				<generacja>VI</generacja>
 			</nazwa>
-			<nazwa>Mustang</nazwa>
-			<marka>Ford</marka>
 			<przebieg>40000</przebieg>
 			<rok_produkcji>2015</rok_produkcji>
 			<kolor>biały</kolor>

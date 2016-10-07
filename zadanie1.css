@@ -1,8 +1,3 @@
-*
-{
-	margin: 5pt 5pt 5pt 5pt;
-}
-
 opis, samochód, wypożyczenie
 {
 	display: block;
@@ -10,7 +5,12 @@ opis, samochód, wypożyczenie
 
 wypożyczenie > pracownik, wypożyczenie > samochód
 {
-	display: inline;
+	display: none;
+}
+
+pracownicy:before
+{
+    content: "Pracownicy: ";
 }
 
 pracownik
@@ -31,5 +31,109 @@ autor:before
 
 wypożyczający:before
 {
-	
+	content: attr(imie) " " attr(nazwisko) " Pesel " attr(pesel) " Numer telefonu " attr(nr_telefonu);
+}
+
+wypożyczenia:before
+{
+    content: "Aktualne wypożyczenia: ";
+}
+
+data_wypożyczenia:before
+{
+    content: "Data wypożyczenia ";
+}
+
+data_zwrotu:before
+{
+    content: "Data zwrotu ";
+}
+
+samochody:before
+{
+    content: "Nasze samochody: "
+}
+
+samochody > samochód:first-child > nazwa:before
+{
+    display: block;
+    content: "Nazwa";
+}
+
+nazwa
+{
+    display: inline-block;
+    width: 110pt;
+}
+
+samochody > samochód:first-child > przebieg:before
+{
+    display: block;
+    content: "Przebieg";
+}
+
+przebieg
+{
+    display: inline-block;
+    width: 50pt;
+}
+
+samochody > samochód:first-child > rok_produkcji:before
+{
+    display: block;
+    content: "Rocznik";
+}
+
+rok_produkcji
+{
+    display: inline-block;
+    width: 45pt;
+}
+
+samochody > samochód:first-child > kolor:before
+{
+    display: block;
+    content: "Kolor";
+}
+
+kolor
+{
+    display: inline-block;
+    width: 70pt;
+}
+
+samochody > samochód:first-child > czy_wypożyczone:before
+{
+    display: block;
+    content: "Wypożyczone";
+}
+
+czy_wypożyczone
+{
+    display: inline-block;
+    width: 70pt;
+}
+
+samochody > samochód:first-child > cena_wypożyczenia_za_1_dzien:before
+{
+    display: block;
+    content: "Cena za dobę";
+}
+
+cena_wypożyczenia_za_1_dzien
+{
+    display: inline-block;
+    width: 70pt;
+}
+
+samochody > samochód:first-child > miasto:before
+{
+    display: block;
+    content: "Miasto";
+}
+
+miasto
+{
+    display: inline-block;
+    width: 100pt;
 }
