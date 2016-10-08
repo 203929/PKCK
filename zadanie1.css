@@ -19,6 +19,7 @@ autorzy
     text-align: right;
     position: relative;
     top: -30px;
+    color:aliceblue;
 }
 opis, samochód, wypożyczenie
 {
@@ -119,7 +120,7 @@ data_zwrotu:before
 }
 samochody > samochód:first-child 
 {
-    //border-top: solid #303030;
+    
     padding-top: 30px;
 }
 samochody > samochód:first-child > nazwa:before
@@ -132,11 +133,8 @@ samochody > samochód:first-child > nazwa:before
 nazwa
 {
     display: inline-block;
-    width: 25%;
-    border-right: solid #303030;
-    border-width: 1px;
+    width: 20%;
 }
-
 samochody > samochód:first-child > przebieg:before
 {
     display: block;
@@ -144,7 +142,10 @@ samochody > samochód:first-child > przebieg:before
     margin-bottom: 80px;
     margin-top: -60px;
 }
-
+przebieg:after
+{
+    content: " " attr(jednostka);
+}
 przebieg
 {
     display: inline-block;
@@ -176,7 +177,7 @@ samochody > samochód:first-child > kolor:before
 kolor
 {
     display: inline-block;
-    width: 10%;
+    width: 15%;
 }
 
 samochody > samochód:first-child > czy_wypożyczone:before
@@ -198,14 +199,20 @@ samochody > samochód:first-child > cena_wypożyczenia_za_1_dzien:before
     content: "Cena za dobę";
     margin-bottom: 80px;
     margin-top: -60px;
+    font-weight:100
 }
 
 cena_wypożyczenia_za_1_dzien
 {
-  display: inline-block;
-  width: 10%;
+    display: inline-block;
+    width: 15%;
+    font-weight: bold;
+    
 }
-
+cena_wypożyczenia_za_1_dzien:after
+{
+    content: " " attr(waluta);
+}
 samochody > samochód:first-child > miasto:before
 {
     display: block;
@@ -222,9 +229,10 @@ samochód
     padding-top: 70px;
     padding-bottom: 70px;
     box-shadow: 2px 2px 5px #888888;
+    font-size: 25px;
 }
 miasto
 {
     display: inline-block;
-    width: 100pt;
+    width: 15%;
 }
