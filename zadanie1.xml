@@ -8,21 +8,184 @@
 			<autor imie="Przemysław" nazwisko="Gęsieniec" nr_indexu="195591"/>
 		</autorzy>
 	</opis>
- 	<pracownicy>
-		<pracownik id="JK1">
-			<imie>Jan</imie>
-			<nazwisko>Kowalski</nazwisko>
-		</pracownik>
-		<pracownik id="AG1">
-			<imie>Adam</imie>
-			<nazwisko>Garnys</nazwisko>
-		</pracownik>
-		<pracownik id="FF1">
-			<imie>Franek</imie>
-			<nazwisko>Frankowicz</nazwisko>
-		</pracownik>
-	</pracownicy>
-	<wypożyczenia>
+
+	<samochody>
+		<samochód id="CH1" marka="">
+			<nazwa>
+				<model>Civic</model>
+				<marka>Honda</marka>
+				<generacja>VIII</generacja>
+			</nazwa>
+			<przebieg jednostka="km">140598</przebieg>
+			<rok_produkcji>2007</rok_produkcji>
+			<kolor>czekoladowy</kolor>
+			<czy_wypożyczone>tak</czy_wypożyczone>
+            <miasto>Łódź</miasto>
+			<cena_wypożyczenia_za_1_dzien waluta="PLN">47.50</cena_wypożyczenia_za_1_dzien>
+			
+		</samochód>
+		<samochód id="AM1">
+			<nazwa>
+				<model>A</model>
+				<marka>Mercedes</marka>
+				<generacja>II</generacja>
+			</nazwa>
+			<przebieg>250547</przebieg>
+			<rok_produkcji>2010</rok_produkcji>
+			<kolor>srebrny</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Warszawa</miasto>
+			<cena_wypożyczenia_za_1_dzien>99.99</cena_wypożyczenia_za_1_dzien>
+			
+		</samochód>
+		<samochód id="VO1">
+			<nazwa>
+				<model>Vectra</model>
+				<marka>Opel</marka>
+				<generacja>C</generacja>
+			</nazwa>
+			<przebieg>157230</przebieg>
+			<rok_produkcji>2005</rok_produkcji>
+			<kolor>czarny</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Łódź</miasto>
+			<cena_wypożyczenia_za_1_dzien>35.75</cena_wypożyczenia_za_1_dzien>
+			
+		</samochód>
+		<samochód id="IS1">
+			<nazwa>
+				<model>Ibiza</model>
+				<marka>Seat</marka>
+				<generacja>IV</generacja>
+			</nazwa>
+			<przebieg>57430</przebieg>
+			<rok_produkcji>2012</rok_produkcji>
+			<kolor>czerwony</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Warszawa</miasto>
+			<cena_wypożyczenia_za_1_dzien>150.00</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="AO1">
+			<nazwa>
+				<model>Astra</model>
+				<marka>Opel</marka>
+				<generacja>H</generacja>
+			</nazwa>
+			<przebieg>30000</przebieg>
+			<rok_produkcji>2008</rok_produkcji>
+			<kolor>niebieski</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Łódź</miasto>
+			<cena_wypożyczenia_za_1_dzien>70.85</cena_wypożyczenia_za_1_dzien>	
+		</samochód>
+		<samochód id="PF1">	
+			<nazwa>
+				<model>Panda</model>
+				<marka>Fiat</marka>
+				<generacja>II</generacja>
+			</nazwa>
+			<przebieg>180043</przebieg>
+			<rok_produkcji>2003</rok_produkcji>
+			<kolor>biały</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Łódź</miasto>
+			<cena_wypożyczenia_za_1_dzien>35.83</cena_wypożyczenia_za_1_dzien>		
+		</samochód>
+		<samochód id="FF1">	
+			<nazwa>
+				<model>Focus</model>
+				<marka>Ford</marka>
+				<generacja>II</generacja>
+			</nazwa>
+			<przebieg>90000</przebieg>
+			<rok_produkcji>2011</rok_produkcji>
+			<kolor>granatowy</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Warszawa</miasto>
+			<cena_wypożyczenia_za_1_dzien>60.45</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="YT1">	
+			<nazwa>
+				<model>Yaris</model>
+				<marka>Toyota</marka>
+				<generacja>II</generacja>
+			</nazwa>
+			<przebieg>98534</przebieg>
+			<rok_produkcji>2006</rok_produkcji>
+			<kolor>zielony</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Wrocław</miasto>
+			<cena_wypożyczenia_za_1_dzien>25.78</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="MF1">	
+			<nazwa>
+				<model>Multipla</model>
+				<marka>Fiat</marka>
+				<generacja>I</generacja>
+			</nazwa>
+			<przebieg>40000</przebieg>
+			<rok_produkcji>2001</rok_produkcji>
+			<kolor>srebrny</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Wrocław</miasto>
+			<cena_wypożyczenia_za_1_dzien>30.35</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="CM1">	
+			<nazwa>
+				<model>CLA</model>
+				<marka>Mercedes</marka>
+				<generacja></generacja>
+			</nazwa>
+			<przebieg>20500</przebieg>
+			<rok_produkcji>2015</rok_produkcji>
+			<kolor>czarny</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Warszawa</miasto>
+			<cena_wypożyczenia_za_1_dzien>130.43</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="MF1">	
+			<nazwa>
+				<model>Mustang</model>
+				<marka>Ford</marka>
+				<generacja>VI</generacja>
+			</nazwa>
+			<przebieg>40000</przebieg>
+			<rok_produkcji>2015</rok_produkcji>
+			<kolor>biały</kolor>
+			<czy_wypożyczone>tak</czy_wypożyczone>
+            <miasto>Warszawa</miasto>
+			<cena_wypożyczenia_za_1_dzien>250.69</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+		<samochód id="1F1">	
+			<nazwa>
+				<model>126p</model>
+				<marka>Fiat</marka>
+				<generacja></generacja>
+			</nazwa>
+			<przebieg>300000</przebieg>
+			<rok_produkcji>1989</rok_produkcji>
+			<kolor>żółty</kolor>
+			<czy_wypożyczone>nie</czy_wypożyczone>
+            <miasto>Wrocław</miasto>
+			<cena_wypożyczenia_za_1_dzien>150.90</cena_wypożyczenia_za_1_dzien>
+		</samochód>
+	</samochody>
+    <usługi>
+        <pracownicy>
+            <pracownik id="JK1">
+                <imie>Jan</imie>
+                <nazwisko>Kowalski</nazwisko>
+            </pracownik>
+            <pracownik id="AG1">
+                <imie>Adam</imie>
+                <nazwisko>Garnys</nazwisko>
+            </pracownik>
+            <pracownik id="FF1">
+                <imie>Franek</imie>
+                <nazwisko>Frankowicz</nazwisko>
+            </pracownik>
+        </pracownicy>
+        <wypożyczenia>
 		<wypożyczenie>
 			<pracownik id="JK1"> </pracownik>
 			<samochód id="CH1"> </samochód>
@@ -38,162 +201,5 @@
 			<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="756-459-785"/>
 		</wypożyczenie>
 	</wypożyczenia>
-	<samochody>
-		<samochód id="CH1" marka="">
-			<nazwa>
-				<model>Civic</model>
-				<marka>Honda</marka>
-				<generacja>VIII</generacja>
-			</nazwa>
-			<przebieg jednostka="km">140598</przebieg>
-			<rok_produkcji>2007</rok_produkcji>
-			<kolor>czekoladowy</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien waluta="PLN">47.50</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
-		</samochód>
-		<samochód id="AM1">
-			<nazwa>
-				<model>A</model>
-				<marka>Mercedes</marka>
-				<generacja>II</generacja>
-			</nazwa>
-			<przebieg>250547</przebieg>
-			<rok_produkcji>2010</rok_produkcji>
-			<kolor>srebrny</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>99.99</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
-		</samochód>
-		<samochód id="VO1">
-			<nazwa>
-				<model>Vectra</model>
-				<marka>Opel</marka>
-				<generacja>C</generacja>
-			</nazwa>
-			<przebieg>157230</przebieg>
-			<rok_produkcji>2005</rok_produkcji>
-			<kolor>czarny</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>35.75</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
-		</samochód>
-		<samochód id="IS1">
-			<nazwa>
-				<model>Ibiza</model>
-				<marka>Seat</marka>
-				<generacja>IV</generacja>
-			</nazwa>
-			<przebieg>57430</przebieg>
-			<rok_produkcji>2012</rok_produkcji>
-			<kolor>czerwony</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>150.00</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
-		</samochód>
-		<samochód id="AO1">
-			<nazwa>
-				<model>Astra</model>
-				<marka>Opel</marka>
-				<generacja>H</generacja>
-			</nazwa>
-			<przebieg>30000</przebieg>
-			<rok_produkcji>2008</rok_produkcji>
-			<kolor>niebieski</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>70.85</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
-		</samochód>
-		<samochód id="PF1">	
-			<nazwa>
-				<model>Panda</model>
-				<marka>Fiat</marka>
-				<generacja>II</generacja>
-			</nazwa>
-			<przebieg>180043</przebieg>
-			<rok_produkcji>2003</rok_produkcji>
-			<kolor>biały</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>35.83</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
-		</samochód>
-		<samochód id="FF1">	
-			<nazwa>
-				<model>Focus</model>
-				<marka>Ford</marka>
-				<generacja>II</generacja>
-			</nazwa>
-			<przebieg>90000</przebieg>
-			<rok_produkcji>2011</rok_produkcji>
-			<kolor>granatowy</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>60.45</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
-		</samochód>
-		<samochód id="YT1">	
-			<nazwa>
-				<model>Yaris</model>
-				<marka>Toyota</marka>
-				<generacja>II</generacja>
-			</nazwa>
-			<przebieg>98534</przebieg>
-			<rok_produkcji>2006</rok_produkcji>
-			<kolor>zielony</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>25.78</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
-		</samochód>
-		<samochód id="MF1">	
-			<nazwa>
-				<model>Multipla</model>
-				<marka>Fiat</marka>
-				<generacja>I</generacja>
-			</nazwa>
-			<przebieg>40000</przebieg>
-			<rok_produkcji>2001</rok_produkcji>
-			<kolor>srebrny</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>30.35</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
-		</samochód>
-		<samochód id="CM1">	
-			<nazwa>
-				<model>CLA</model>
-				<marka>Mercedes</marka>
-				<generacja></generacja>
-			</nazwa>
-			<przebieg>20500</przebieg>
-			<rok_produkcji>2015</rok_produkcji>
-			<kolor>czarny</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>130.43</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
-		</samochód>
-		<samochód id="MF1">	
-			<nazwa>
-				<model>Mustang</model>
-				<marka>Ford</marka>
-				<generacja>VI</generacja>
-			</nazwa>
-			<przebieg>40000</przebieg>
-			<rok_produkcji>2015</rok_produkcji>
-			<kolor>biały</kolor>
-			<czy_wypożyczone>tak</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>250.69</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
-		</samochód>
-		<samochód id="1F1">	
-			<nazwa>
-				<model>126p</model>
-				<marka>Fiat</marka>
-				<generacja></generacja>
-			</nazwa>
-			<przebieg>300000</przebieg>
-			<rok_produkcji>1989</rok_produkcji>
-			<kolor>żółty</kolor>
-			<czy_wypożyczone>nie</czy_wypożyczone>
-			<cena_wypożyczenia_za_1_dzien>150.90</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
-		</samochód>
-	</samochody>
+    </usługi>
 </wypożyczalnia>

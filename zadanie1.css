@@ -1,3 +1,8 @@
+wypożyczalnia
+{
+    font-size: 20px;
+    background-color: #f4f4f4;
+}
 opis, samochód, wypożyczenie
 {
 	display: block;
@@ -17,8 +22,31 @@ pracownik
 {
 	display: list-item;
 	margin-left: 10pt;
+    
 }
-
+pracownicy
+{
+    display: block;
+    background-color: aqua;
+    width: 90%;
+    float:left;
+    
+    margin-bottom: 100px;
+}
+samochody
+{
+    float:left;
+    display: block;
+    width: 60%;
+    padding-top: 100px;
+}
+usługi
+{
+    width:30%;
+    float:left;
+    margin-top: 135px;
+    margin-left: 5%;
+}
 autor
 {
 	display: inline;
@@ -36,6 +64,7 @@ wypożyczający:before
 
 wypożyczenia:before
 {
+    clear:both;
     content: "Aktualne wypożyczenia: ";
 }
 
@@ -44,6 +73,7 @@ wypożyczenie
     margin-left: 14pt;
     display: list-item;
     list-style: upper-roman;
+    clear:both;
 }
 
 data_wypożyczenia:before
@@ -58,87 +88,113 @@ data_zwrotu:before
 
 samochody:before
 {
-    content: "Nasze samochody: "
+    content: "Nasze samochody: ";    
 }
-
+samochody > samochód:first-child 
+{
+    //border-top: solid #303030;
+    padding-top: 30px;
+}
 samochody > samochód:first-child > nazwa:before
 {
     display: block;
     content: "Nazwa";
+    margin-bottom: 80px;
+    margin-top: -80px;
 }
-
 nazwa
 {
     display: inline-block;
-    width: 110pt;
+    width: 25%;
+    border-right: solid #303030;
+    border-width: 1px;
 }
 
 samochody > samochód:first-child > przebieg:before
 {
     display: block;
     content: "Przebieg";
+    margin-bottom: 80px;
+    margin-top: -60px;
 }
 
 przebieg
 {
     display: inline-block;
-    width: 50pt;
-}
+    width: 10%;
+} 
 
 samochody > samochód:first-child > rok_produkcji:before
 {
     display: block;
     content: "Rocznik";
+    margin-bottom: 80px;
+    margin-top: -60px;
 }
 
 rok_produkcji
 {
     display: inline-block;
-    width: 45pt;
+    width: 10%;
 }
 
 samochody > samochód:first-child > kolor:before
 {
     display: block;
     content: "Kolor";
+    margin-bottom: 80px;
+    margin-top: -60px;
 }
 
 kolor
 {
     display: inline-block;
-    width: 70pt;
+    width: 10%;
 }
 
 samochody > samochód:first-child > czy_wypożyczone:before
 {
     display: block;
-    content: "Wypożyczone";
+    content: "Wypożyczone  ";
+    margin-bottom: 80px;
+    margin-top: -60px;
+    
 }
-
 czy_wypożyczone
 {
     display: inline-block;
-    width: 70pt;
+    width: 10%;   
 }
-
 samochody > samochód:first-child > cena_wypożyczenia_za_1_dzien:before
 {
     display: block;
     content: "Cena za dobę";
+    margin-bottom: 80px;
+    margin-top: -60px;
 }
 
 cena_wypożyczenia_za_1_dzien
 {
-    display: inline-block;
-    width: 70pt;
+  display: inline-block;
+  width: 10%;
 }
 
 samochody > samochód:first-child > miasto:before
 {
     display: block;
     content: "Miasto";
+    margin-bottom: 80px;
+    margin-top: -60px;
 }
-
+samochód
+{
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 10%;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 miasto
 {
     display: inline-block;
