@@ -39,6 +39,13 @@ wypożyczenia:before
     content: "Aktualne wypożyczenia: ";
 }
 
+wypożyczenie
+{
+    margin-left: 14pt;
+    display: list-item;
+    list-style: upper-roman;
+}
+
 data_wypożyczenia:before
 {
     content: "Data wypożyczenia ";
