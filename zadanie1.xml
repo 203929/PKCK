@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="zadanie1.css"?>
-<!DOCTYPE wypożyczalnia [
-
-<!ELEMENT wypożyczalnia (opis,pracownicy,wypożyczenia,samochody)>
-
-<!ELEMENT opis (temat,autorzy)>
-<!ELEMENT temat (#PCDATA)>
-<!ELEMENT autorzy (autor+)>
-
-<!ELEMENT autor EMPTY>
-<!ATTLIST autor imie CDATA #REQUIRED>
-<!ATTLIST autor nazwisko CDATA #REQUIRED>
-<!ATTLIST autor nr_indeksu CDATA #REQUIRED>
-
-<!ELEMENT pracownicy (pracownik+)>
-<!ELEMENT pracownik (imie,nazwisko)>
-<!ATTLIST pracownik id ID #REQUIRED>
-<!ELEMENT imie (#PCDATA)>
-<!ELEMENT nazwisko (#PCDATA)>
-
-<!ELEMENT wypożeczenia (wypożyczenie+)>
-<!ELEMENT wypożyczenie (data_wypożyczenia,data_zwrotu,wypożyczający)>
-<!ATTLIST wypożyczenie id_pracownika IDREF #REQUIRED>
-<!ATTLIST wypożyczenie id_samochodu IDREF #REQUIRED>
-<!ELEMENT wypożyczający EMPTY>
-<!ATTLIST wypożyczający imie CDATA #REQUIRED>
-<!ATTLIST wypożyczający nazwisko CDATA #REQUIRED>
-<!ATTLIST wypożyczający pesel CDATA #REQUIRED>
-<!ATTLIST wypożyczający nr_telefonu CDATA #REQUIRED>
-
-<!ELEMENT samochody (samochód+)>
-<!ELEMENT samochód (nazwa,przebieg,rok_produkcji,kolor,czy_wypożyczone,cena_wypożyczenia_za_1_dzien,miasto)>
-<!ELEMENT nazwa (model,marka,generacja?)>
-<!ELEMENT model (#PCDATA)>
-<!ELEMENT marka (#PCDATA)>
-<!ELEMENT generacja (#PCDATA)>
-<!ELEMENT przebieg (#PCDATA)>
-
-<!ATTLIST przebieg jednostka CDATA #REQUIRED>
-<!ELEMENT rok_produkcji (#PCDATA)>
-<!ELEMENT kolor (#PCDATA)>
-<!ELEMENT czy_wypożyczone (#PCDATA)>
-<!ELEMENT cena_wypożyczenia_za_1_dzien (#PCDATA)>
-<!ATTLIST cena_wypożyczenia_za_1_dzien waluta CDATA #REQUIRED>
-<!ELEMENT miasto EMPTY>
-<!ATTLIST miasto miasto (Łódź|Warszawa|Wrocław) #REQUIRED>
-]>
+<!DOCTYPE wypożyczalnia SYSTEM "zadanie1.dtd">
 <wypożyczalnia>
 	<opis>
 		<temat>Wypożyczalnia Samochodowa</temat>
