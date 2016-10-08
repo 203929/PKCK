@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="zadanie1.css"?>
+<!DOCTYPE wypożyczalnia [
+
+<!ELEMENT wypożyczalnia (opis,pracownicy,wypożyczenia,samochody)>
+
+<!ELEMENT opis (temat,autorzy)>
+<!ELEMENT temat (#PCDATA)>
+<!ELEMENT autorzy (autor+)>
+
+<!ELEMENT autor EMPTY>
+<!ATTLIST autor imie CDATA #REQUIRED>
+<!ATTLIST autor nazwisko CDATA #REQUIRED>
+<!ATTLIST autor nr_indeksu CDATA #REQUIRED>
+
+<!ELEMENT pracownicy (pracownik+)>
+<!ELEMENT pracownik (imie,nazwisko)>
+<!ATTLIST pracownik id ID #REQUIRED>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+
+<!ELEMENT wypożeczenia (wypożyczenie+)>
+<!ELEMENT wypożyczenie (data_wypożyczenia,data_zwrotu,wypożyczający)>
+<!ATTLIST wypożyczenie id_pracownika IDREF #REQUIRED>
+<!ATTLIST wypożyczenie id_samochodu IDREF #REQUIRED>
+<!ELEMENT wypożyczający EMPTY>
+<!ATTLIST wypożyczający imie CDATA #REQUIRED>
+<!ATTLIST wypożyczający nazwisko CDATA #REQUIRED>
+<!ATTLIST wypożyczający pesel CDATA #REQUIRED>
+<!ATTLIST wypożyczający nr_telefonu CDATA #REQUIRED>
+
+<!ELEMENT samochody (samochód+)>
+<!ELEMENT samochód (nazwa,przebieg,rok_produkcji,kolor,czy_wypożyczone,cena_wypożyczenia_za_1_dzien,miasto)>
+<!ELEMENT nazwa (model,marka,generacja?)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT marka (#PCDATA)>
+<!ELEMENT generacja (#PCDATA)>
+<!ELEMENT przebieg (#PCDATA)>
+
+<!ATTLIST przebieg jednostka CDATA #REQUIRED>
+<!ELEMENT rok_produkcji (#PCDATA)>
+<!ELEMENT kolor (#PCDATA)>
+<!ELEMENT czy_wypożyczone (#PCDATA)>
+<!ELEMENT cena_wypożyczenia_za_1_dzien (#PCDATA)>
+<!ATTLIST cena_wypożyczenia_za_1_dzien waluta CDATA #REQUIRED>
+<!ELEMENT miasto EMPTY>
+<!ATTLIST miasto miasto (Łódź|Warszawa|Wrocław) #REQUIRED>
+]>
 <wypożyczalnia>
 	<opis>
 		<temat>Wypożyczalnia Samochodowa</temat>
 		<autorzy>
-			<autor imie="Łukasz" nazwisko="Zimoń" nr_indexu="195753"/>
-			<autor imie="Przemysław" nazwisko="Gęsieniec" nr_indexu="195591"/>
+			<autor imie="Łukasz" nazwisko="Zimoń" nr_indeksu="195753"/>
+			<autor imie="Przemysław" nazwisko="Gęsieniec" nr_indeksu="195591"/>
 		</autorzy>
 	</opis>
  	<pracownicy>
@@ -23,23 +69,19 @@
 		</pracownik>
 	</pracownicy>
 	<wypożyczenia>
-		<wypożyczenie>
-			<pracownik id="JK1"> </pracownik>
-			<samochód id="CH1"> </samochód>
+		<wypożyczenie id_pracownika="JK1" id_samochodu="CH1">
 			<data_wypożyczenia>03.10.2016</data_wypożyczenia>
 			<data_zwrotu>11.11.2016</data_zwrotu>
 			<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="512-324-456"/>
 		</wypożyczenie>
-		<wypożyczenie>
-			<pracownik id="AG1"> </pracownik>
-			<samochód id="MF1"> </samochód>
+		<wypożyczenie id_pracownika="AG1" id_samochodu="MF1">
 			<data_wypożyczenia>21.8.2016</data_wypożyczenia>
 			<data_zwrotu>12.12.2016</data_zwrotu>
 			<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="756-459-785"/>
 		</wypożyczenie>
 	</wypożyczenia>
 	<samochody>
-		<samochód id="CH1" marka="">
+		<samochód id="CH1">
 			<nazwa>
 				<model>Civic</model>
 				<marka>Honda</marka>
@@ -50,7 +92,7 @@
 			<kolor>czekoladowy</kolor>
 			<czy_wypożyczone>tak</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">47.50</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
+			<miasto miasto="Łódź"></miasto>
 		</samochód>
 		<samochód id="AM1">
 			<nazwa>
@@ -63,7 +105,7 @@
 			<kolor>srebrny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">99.99</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
+			<miasto miasto="Warszawa"></miasto>
 		</samochód>
 		<samochód id="VO1">
 			<nazwa>
@@ -76,7 +118,7 @@
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">35.75</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
+			<miasto miasto="Łódź"></miasto>
 		</samochód>
 		<samochód id="IS1">
 			<nazwa>
@@ -89,7 +131,7 @@
 			<kolor>czerwony</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">150.00</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
+			<miasto miasto="Warszawa"></miasto>
 		</samochód>
 		<samochód id="AO1">
 			<nazwa>
@@ -102,7 +144,7 @@
 			<kolor>niebieski</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">70.85</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
+			<miasto miasto="Łódź"></miasto>
 		</samochód>
 		<samochód id="PF1">	
 			<nazwa>
@@ -115,7 +157,7 @@
 			<kolor>biały</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">35.83</cena_wypożyczenia_za_1_dzien>
-			<miasto>Łódź</miasto>
+			<miasto miasto="Łódź"></miasto>
 		</samochód>
 		<samochód id="FF1">	
 			<nazwa>
@@ -128,7 +170,7 @@
 			<kolor>granatowy</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">60.45</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
+			<miasto miasto="Warszawa"></miasto>
 		</samochód>
 		<samochód id="YT1">	
 			<nazwa>
@@ -141,7 +183,7 @@
 			<kolor>zielony</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">25.78</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
+			<miasto miasto="Wrocław"></miasto>
 		</samochód>
 		<samochód id="MF1">	
 			<nazwa>
@@ -154,20 +196,19 @@
 			<kolor>srebrny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">30.35</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
+			<miasto miasto="Wrocław"></miasto>
 		</samochód>
 		<samochód id="CM1">	
 			<nazwa>
 				<model>CLA</model>
 				<marka>Mercedes</marka>
-				<generacja></generacja>
 			</nazwa>
 			<przebieg jednostka="km">20500</przebieg>
 			<rok_produkcji>2015</rok_produkcji>
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">130.43</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
+			<miasto miasto="Warszawa"></miasto>
 		</samochód>
 		<samochód id="MF1">	
 			<nazwa>
@@ -180,20 +221,19 @@
 			<kolor>biały</kolor>
 			<czy_wypożyczone>tak</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">250.69</cena_wypożyczenia_za_1_dzien>
-			<miasto>Warszawa</miasto>
+			<miasto miasto="Warszawa"></miasto>
 		</samochód>
 		<samochód id="1F1">	
 			<nazwa>
 				<model>126p</model>
 				<marka>Fiat</marka>
-				<generacja></generacja>
 			</nazwa>
 			<przebieg jednostka="km">300000</przebieg>
 			<rok_produkcji>1989</rok_produkcji>
 			<kolor>żółty</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">150.90</cena_wypożyczenia_za_1_dzien>
-			<miasto>Wrocław</miasto>
+			<miasto miasto="Wrocław"></miasto>
 		</samochód>
 	</samochody>
 </wypożyczalnia>

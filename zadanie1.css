@@ -26,7 +26,7 @@ autor
 
 autor:before
 {
-	content: attr(imie) " " attr(nazwisko) " " attr(nr_indexu); 
+	content: attr(imie) " " attr(nazwisko) " " attr(nr_indeksu); 
 }
 
 wypożyczający:before
