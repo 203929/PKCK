@@ -3,6 +3,23 @@ wypożyczalnia
     font-size: 20px;
     background-color: #f4f4f4;
 }
+temat
+{
+    text-align: center;
+    font-size: 50px;
+    display:block;
+    color:white;
+    background-color: #909090;
+    padding: 20px;
+    box-shadow: 4px 4px 12px #888888;
+}
+autorzy
+{
+    display:block;
+    text-align: right;
+    position: relative;
+    top: -30px;
+}
 opis, samochód, wypożyczenie
 {
 	display: block;
@@ -16,6 +33,7 @@ wypożyczenie > pracownik, wypożyczenie > samochód
 pracownicy:before
 {
     content: "Pracownicy: ";
+    font-weight: bold;
 }
 
 pracownik
@@ -30,8 +48,13 @@ pracownicy
     background-color: #ffffff;
     width: 90%;
     float:left;
-    
-    margin-bottom: 100px;
+    line-height: 2;
+    font-size: 30px;
+    margin-bottom: 100px;  
+    margin-left: 14px;
+    padding-left: 30px;
+    margin-top: -25px;
+    box-shadow: 2px 2px 5px #888888;
 }
 samochody
 {
@@ -65,15 +88,24 @@ wypożyczający:before
 wypożyczenia:before
 {
     clear:both;
+    font-weight: bold;
+    font-size: 30px;
     content: "Aktualne wypożyczenia: ";
 }
 
 wypożyczenie
 {
-    margin-left: 14pt;
+    margin-left: 14px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     display: list-item;
     list-style: upper-roman;
     clear:both;
+    background-color: white;
+    line-height: 1.2;
+     box-shadow: 2px 2px 5px #888888;
 }
 
 data_wypożyczenia:before
@@ -84,11 +116,6 @@ data_wypożyczenia:before
 data_zwrotu:before
 {
     content: "Data zwrotu ";
-}
-
-samochody:before
-{
-    content: "Nasze samochody: ";    
 }
 samochody > samochód:first-child 
 {
@@ -194,6 +221,7 @@ samochód
     text-align: center;
     padding-top: 70px;
     padding-bottom: 70px;
+    box-shadow: 2px 2px 5px #888888;
 }
 miasto
 {
