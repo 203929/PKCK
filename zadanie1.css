@@ -82,7 +82,12 @@ samochody > samochód:first-child > przebieg:before
 przebieg
 {
     display: inline-block;
-    width: 50pt;
+    width: 60pt;
+}
+
+przebieg:after
+{
+    content: " " attr(jednostka);
 }
 
 samochody > samochód:first-child > rok_produkcji:before
@@ -131,6 +136,11 @@ cena_wypożyczenia_za_1_dzien
 {
     display: inline-block;
     width: 70pt;
+}
+
+cena_wypożyczenia_za_1_dzien:after
+{
+    content: " " attr(waluta);
 }
 
 samochody > samochód:first-child > miasto:before
