@@ -20,7 +20,7 @@
 			<rok_produkcji>2007</rok_produkcji>
 			<kolor>czekoladowy</kolor>
 			<czy_wypożyczone>tak</czy_wypożyczone>
-			<miasto miasto="Łódź"></miasto>
+			<miasto miasto="Łódź"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">47.50</cena_wypożyczenia_za_1_dzien>
 		</samochód>
 		<samochód id="AM1">
@@ -33,7 +33,7 @@
 			<rok_produkcji>2010</rok_produkcji>
 			<kolor>srebrny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Warszawa"></miasto>
+			<miasto miasto="Warszawa"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">99.99</cena_wypożyczenia_za_1_dzien>
 		</samochód>
 		<samochód id="VO1">
@@ -46,7 +46,7 @@
 			<rok_produkcji>2005</rok_produkcji>
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Łódź"></miasto>
+			<miasto miasto="Łódź"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">35.75</cena_wypożyczenia_za_1_dzien>
 		</samochód>
 		<samochód id="IS1">
@@ -59,7 +59,7 @@
 			<rok_produkcji>2012</rok_produkcji>
 			<kolor>czerwony</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Warszawa"></miasto>
+			<miasto miasto="Warszawa"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">150.00</cena_wypożyczenia_za_1_dzien>
 		</samochód>
 		<samochód id="AO1">
@@ -72,10 +72,10 @@
 			<rok_produkcji>2008</rok_produkcji>
 			<kolor>niebieski</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Łódź"></miasto>
+			<miasto miasto="Łódź"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">70.85</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="PF1">	
+		<samochód id="PF1">
 			<nazwa>
 				<model>Panda</model>
 				<marka>Fiat</marka>
@@ -85,10 +85,10 @@
 			<rok_produkcji>2003</rok_produkcji>
 			<kolor>biały</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Łódź"></miasto>
+			<miasto miasto="Łódź"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">35.83</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="FF1">	
+		<samochód id="FF1">
 			<nazwa>
 				<model>Focus</model>
 				<marka>Ford</marka>
@@ -98,10 +98,10 @@
 			<rok_produkcji>2011</rok_produkcji>
 			<kolor>granatowy</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Warszawa"></miasto>
+			<miasto miasto="Warszawa"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">60.45</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="YT1">	
+		<samochód id="YT1">
 			<nazwa>
 				<model>Yaris</model>
 				<marka>Toyota</marka>
@@ -111,10 +111,10 @@
 			<rok_produkcji>2006</rok_produkcji>
 			<kolor>zielony</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Wrocław"></miasto>
+			<miasto miasto="Wrocław"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">25.78</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="MF1">	
+		<samochód id="MF1">
 			<nazwa>
 				<model>Multipla</model>
 				<marka>Fiat</marka>
@@ -124,10 +124,10 @@
 			<rok_produkcji>2001</rok_produkcji>
 			<kolor>srebrny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Wrocław"></miasto>
+			<miasto miasto="Wrocław"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">30.35</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="CM1">	
+		<samochód id="CM1">
 			<nazwa>
 				<model>CLA</model>
 				<marka>Mercedes</marka>
@@ -136,10 +136,10 @@
 			<rok_produkcji>2015</rok_produkcji>
 			<kolor>czarny</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Warszawa"></miasto>
+			<miasto miasto="Warszawa"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">130.43</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="MF1">	
+		<samochód id="MF2">
 			<nazwa>
 				<model>Mustang</model>
 				<marka>Ford</marka>
@@ -149,10 +149,10 @@
 			<rok_produkcji>2015</rok_produkcji>
 			<kolor>biały</kolor>
 			<czy_wypożyczone>tak</czy_wypożyczone>
-			<miasto miasto="Warszawa"></miasto>
+			<miasto miasto="Warszawa"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">250.69</cena_wypożyczenia_za_1_dzien>
 		</samochód>
-		<samochód id="1F1">	
+		<samochód id="PF2">
 			<nazwa>
 				<model>126p</model>
 				<marka>Fiat</marka>
@@ -161,7 +161,7 @@
 			<rok_produkcji>1989</rok_produkcji>
 			<kolor>żółty</kolor>
 			<czy_wypożyczone>nie</czy_wypożyczone>
-			<miasto miasto="Wrocław"></miasto>
+			<miasto miasto="Wrocław"/>
 			<cena_wypożyczenia_za_1_dzien waluta="PLN">150.90</cena_wypożyczenia_za_1_dzien>
 		</samochód>
 	</samochody>
@@ -175,7 +175,7 @@
 				<imie>Adam</imie>
 				<nazwisko>Garnys</nazwisko>
 			</pracownik>
-			<pracownik id="FF1">
+			<pracownik id="FF2">
 				<imie>Franek</imie>
 				<nazwisko>Frankowicz</nazwisko>
 			</pracownik>
