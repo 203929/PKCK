@@ -1,7 +1,8 @@
 wypożyczalnia
 {
     font-size: 20px;
-    background-color: #f4f4f4;
+    background-color: #996969;
+    
 }
 temat
 {
@@ -9,9 +10,9 @@ temat
     font-size: 50px;
     display:block;
     color:white;
-    background-color: #909090;
+    background-color: #813030;
     padding: 20px;
-    box-shadow: 4px 4px 12px #888888;
+    box-shadow: 4px 4px 12px #802222;
 }
 autorzy
 {
@@ -27,10 +28,9 @@ opis, samochód, wypożyczenie
 }
 samochód:hover
 {
-    background-color: #f8f8f8;
+    background-color: #842a2a;
     cursor: pointer;
 }
-
 wypożyczenie > pracownik, wypożyczenie > samochód
 {
 	display: none;
@@ -51,7 +51,7 @@ pracownik
 pracownicy
 {
     display: block;
-    background-color: #ffffff;
+    background-color: rgba(132, 42, 42, 0.67);
     width: 90%;
     float:left;
     line-height: 2;
@@ -60,7 +60,7 @@ pracownicy
     margin-left: 14px;
     padding-left: 30px;
     margin-top: -25px;
-    box-shadow: 2px 2px 5px #888888;
+    box-shadow: 2px 2px 5px #802222;
 }
 samochody
 {
@@ -76,6 +76,7 @@ usługi
     float:left;
     margin-top: 135px;
     margin-left: 5%;
+    
 }
 autor
 {
@@ -111,9 +112,9 @@ wypożyczenie
     display: list-item;
     list-style: upper-roman;
     clear:both;
-    background-color: white;
     line-height: 1.2;
-     box-shadow: 2px 2px 5px #888888;
+    box-shadow: 2px 2px 5px #802222;
+    background-color: rgba(132, 42, 42, 0.67);
 }
 
 data_wypożyczenia, data_zwrotu, wypożyczający
@@ -234,13 +235,13 @@ samochody > samochód:first-child > miasto:before
 }
 samochód
 {
-    background-color: #ffffff;
+    background-color: rgba(123, 22, 27, 0.68);
     margin-top: 10px;
     margin-left: 10%;
     text-align: center;
     padding-top: 70px;
     padding-bottom: 70px;
-    box-shadow: 2px 2px 5px #888888;
+    box-shadow: 2px 2px 5px #802222;
     font-size: 25px;
 }
 
