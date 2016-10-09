@@ -25,6 +25,11 @@ opis, samochód, wypożyczenie
 {
 	display: block;
 }
+samochód:hover
+{
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
 
 wypożyczenie > pracownik, wypożyczenie > samochód
 {
@@ -50,7 +55,7 @@ pracownicy
     width: 90%;
     float:left;
     line-height: 2;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 100px;  
     margin-left: 14px;
     padding-left: 30px;
@@ -61,12 +66,13 @@ samochody
 {
     float:left;
     display: block;
-    width: 60%;
+    width: 1300px;
     padding-top: 100px;
+    margin-left: -40px;
 }
 usługi
 {
-    width:30%;
+    width:400px;
     float:left;
     margin-top: 135px;
     margin-left: 5%;
