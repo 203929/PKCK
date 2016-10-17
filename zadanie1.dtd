@@ -2,8 +2,8 @@
 <!ENTITY % jednostki "(km|mil)">
 <!ENTITY % waluty "(PLN)">
 
-<!ELEMENT wypożyczalnia (opis,samochody,usługi)>
 
+<!ELEMENT wypożyczalnia (opis,samochody,usługi)>
 
 <!ELEMENT opis (temat,autorzy)>
 <!ELEMENT temat (#PCDATA)>
@@ -44,8 +44,8 @@
 
 <!ELEMENT wypożyczenia (wypożyczenie)+>
 <!ELEMENT wypożyczenie (data_wypożyczenia,data_zwrotu,wypożyczający)>
-<!ATTLIST wypożyczenie id_pracownika CDATA #REQUIRED>
-<!ATTLIST wypożyczenie id_samochodu CDATA #REQUIRED>
+<!ATTLIST wypożyczenie id_pracownika IDREF #REQUIRED>
+<!ATTLIST wypożyczenie id_samochodu IDREF #REQUIRED>
 <!ELEMENT data_wypożyczenia (#PCDATA)>
 <!ELEMENT data_zwrotu (#PCDATA)>
 <!ELEMENT wypożyczający EMPTY>
@@ -53,5 +53,4 @@
 <!ATTLIST wypożyczający nazwisko CDATA #REQUIRED>
 <!ATTLIST wypożyczający pesel CDATA #REQUIRED>
 <!ATTLIST wypożyczający nr_telefonu CDATA #REQUIRED>
-
 
