@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/typy" xmlns="http://www.example.org/typy" elementFormDefault="qualified" >
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/typy" xmlns:typy="http://www.example.org/typy" elementFormDefault="qualified" >
   <xs:element name="wypożyczalnia">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="opis">
           <xs:complexType>
             <xs:sequence>
-              <xs:element minOccurs="0" maxOccurs="1" name="temat" type="dlugiCiagZnakow"/>
+              <xs:element minOccurs="0" maxOccurs="1" name="temat" type="typy:dlugiCiagZnakow"/>
               <xs:element name="autorzy">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element minOccurs="2" maxOccurs="2" name="autor" type="autor" />
+                    <xs:element minOccurs="2" maxOccurs="2" name="autor" type="typy:autor" />
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -26,9 +26,9 @@
                     <xs:element name="nazwa">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="model" type="krotiCiagZnakow" />
-                          <xs:element name="marka" type="krotiCiagZnakow" />
-                          <xs:element minOccurs="0" name="generacja" type="bardzoKrotiCiagZnakow" />
+                          <xs:element name="model" type="typy:krotiCiagZnakow" />
+                          <xs:element name="marka" type="typy:krotiCiagZnakow" />
+                          <xs:element minOccurs="0" name="generacja" type="typy:bardzoKrotiCiagZnakow" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -36,24 +36,24 @@
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:unsignedInt">
-                            <xs:attribute name="jednostka" type="jednostkaDrogi" use="required" />
+                            <xs:attribute name="jednostka" type="typy:jednostkaDrogi" use="required" />
                           </xs:extension>
                         </xs:simpleContent>
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="rok_produkcji" type="xs:unsignedShort" />
-                    <xs:element name="kolor" type="krotiCiagZnakow" />
-                    <xs:element name="czy_wypożyczone" type="takNie" />
+                    <xs:element name="kolor" type="typy:krotiCiagZnakow" />
+                    <xs:element name="czy_wypożyczone" type="typy:takNie" />
                     <xs:element name="miasto">
                       <xs:complexType>
-                        <xs:attribute name="miasto" type="miasta" use="required" />
+                        <xs:attribute name="miasto" type="typy:miasta" use="required" />
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="cena_wypożyczenia_za_1_dzien">
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="waluta">
-                            <xs:attribute name="waluta" type="waluty" use="required" />
+                          <xs:extension base="typy:waluta">
+                            <xs:attribute name="waluta" type="typy:waluty" use="required" />
                           </xs:extension>
                         </xs:simpleContent>
                       </xs:complexType>
@@ -73,7 +73,7 @@
                   <xs:sequence>
                     <xs:element maxOccurs="unbounded" name="pracownik">
                       <xs:complexType>
-                        <xs:group ref="osoba"/>
+                        <xs:group ref="typy:osoba"/>
                         <xs:attribute name="id" type="xs:string" use="required" />
                       </xs:complexType>
                     </xs:element>
@@ -90,7 +90,7 @@
                           <xs:element name="data_zwrotu" type="xs:date" />
                           <xs:element name="wypożyczający">
                             <xs:complexType>
-                              <xs:attributeGroup ref="wypożyczającyAtrybuty" />
+                              <xs:attributeGroup ref="typy:wypożyczającyAtrybuty" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -107,7 +107,7 @@
             <xs:selector xpath="usługi/pracownicy/pracownik" />
             <xs:field xpath="@id" />
           </xs:key>
-          <xs:keyref name="pracownikRef" refer="pracownikKey">
+          <xs:keyref name="pracownikRef" refer="typy:pracownikKey">
             <xs:selector xpath="usługi/wypożyczenia/wypożyczenie" />
             <xs:field xpath="@id_pracownika"/>
           </xs:keyref>
@@ -119,21 +119,21 @@
   <!-- To chyba może być przeniesione do osobnego namespace'a -->
   <xs:group name="osoba">
     <xs:sequence>
-      <xs:element name="imie" type="dlugiCiagZnakow" />
-      <xs:element name="nazwisko" type="dlugiCiagZnakow" />
+      <xs:element name="imie" type="typy:dlugiCiagZnakow" />
+      <xs:element name="nazwisko" type="typy:dlugiCiagZnakow" />
     </xs:sequence>
   </xs:group>
   
   <xs:attributeGroup name="wypożyczającyAtrybuty">
-    <xs:attribute name="imie" type="dlugiCiagZnakow" use="required" />
-    <xs:attribute name="nazwisko" type="dlugiCiagZnakow" use="required" />
-    <xs:attribute name="pesel" type="pesel" use="required" />
-    <xs:attribute name="nr_telefonu" type="nr_telefonu" use="required" />
+    <xs:attribute name="imie" type="typy:dlugiCiagZnakow" use="required" />
+    <xs:attribute name="nazwisko" type="typy:dlugiCiagZnakow" use="required" />
+    <xs:attribute name="pesel" type="typy:pesel" use="required" />
+    <xs:attribute name="nr_telefonu" type="typy:nr_telefonu" use="required" />
   </xs:attributeGroup>
 
   <xs:complexType name="autor">
-    <xs:attribute name="imie" type="dlugiCiagZnakow" use="required" />
-    <xs:attribute name="nazwisko" type="dlugiCiagZnakow" use="required" />
+    <xs:attribute name="imie" type="typy:dlugiCiagZnakow" use="required" />
+    <xs:attribute name="nazwisko" type="typy:dlugiCiagZnakow" use="required" />
     <xs:attribute name="nr_indeksu" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:unsignedInt">
