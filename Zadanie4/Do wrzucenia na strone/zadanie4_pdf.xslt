@@ -9,7 +9,7 @@
       <fo:layout-master-set>
         <fo:simple-page-master master-name="Raport" page-height="297mm" page-width="210mm" margin-top="5mm" margin-bottom="5mm" margin-left="5mm" margin-right="5mm">
           <fo:region-body margin-top="10mm" margin-bottom="10mm"/>
-          <fo:region-after region-name="xsl-region-after" extent="10mm"/>
+          <fo:region-after region-name="xsl-region-after" extent="20mm"/>
         </fo:simple-page-master>
       </fo:layout-master-set>
       <fo:page-sequence master-reference="Raport">
@@ -24,10 +24,15 @@
             <xsl:text>Statysyki miast</xsl:text>
           </fo:block>
           <xsl:apply-templates select="/wypożyczalnia/statystyki/miasta/miasto"/>
-          <fo:block font-weight="bold" text-align="center" font-size="large" margin-bottom="10mm" margin-top="10mm">
+          <fo:block font-weight="bold" text-align="center" font-size="large" margin-bottom="100mm" margin-top="100mm" line-height="20mm">
             <xsl:text>Wypozyczenia</xsl:text>
           </fo:block>
-          <fo:table margin-left="5mm" margin-right="5mm">
+          <fo:table margin-left="50mm" margin-right="50mm" margin-bottom="10mm" margin-top="10mm" table-layout="fixed" width="200mm" >
+            <fo:table-column column-width="proportional-column-width(1)"/>
+            <fo:table-column column-width="proportional-column-width(1)"/>
+            <fo:table-column column-width="proportional-column-width(1)"/>
+            <fo:table-column column-width="proportional-column-width(1)"/>
+            <fo:table-column column-width="proportional-column-width(1)"/>
             <fo:table-header>
               <fo:table-row>
                 <fo:table-cell text-align="center">
@@ -48,7 +53,6 @@
               </fo:table-row>
             </fo:table-header>
             <fo:table-body>
-              <xsl:text>Wypożyczenia:&#xA;&#xA;</xsl:text>
               <xsl:apply-templates select="/wypożyczalnia/wypożyczenia/wypożyczenie"/>
             </fo:table-body>
           </fo:table>
@@ -115,7 +119,7 @@
   
 
   <xsl:template match="/wypożyczalnia/wypożyczenia/wypożyczenie">
-      <fo:table-row border-color="black" border-width="0.6mm" border-style="solid" margin-top="5mm" margin-bottom="5mm" margin-left="5mm" margin-right="5mm">
+      <fo:table-row line-height="20mm" border-color="black" border-width="0.6mm" border-style="solid" margin-top="5mm" margin-bottom="5mm" margin-left="5mm" margin-right="5mm">
         <fo:table-cell>
           <fo:block>
             <xsl:value-of select="samochod" />
