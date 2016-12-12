@@ -116,7 +116,6 @@
     </xs:complexType>
   </xs:element>
 
-  <!-- To chyba może być przeniesione do osobnego namespace'a -->
   <xs:group name="osoba">
     <xs:sequence>
       <xs:element name="imie" type="typy:dlugiCiagZnakow" />

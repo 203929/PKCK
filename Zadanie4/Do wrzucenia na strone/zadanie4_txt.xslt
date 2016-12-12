@@ -11,32 +11,100 @@
       <xsl:apply-templates select="/wypożyczalnia/wypożyczenia/wypożyczenie"/>
       <xsl:text>Autorzy:&#xA;&#xA;</xsl:text>
       <xsl:apply-templates select="/wypożyczalnia/autorzy/autor"/>
-      <xsl:text>Data Raportu:</xsl:text>
       <xsl:apply-templates select="/wypożyczalnia/data_raportu"/>
     </xsl:template>
 
   <xsl:template match="/wypożyczalnia/statystyki/miasta/miasto">
+
     <xsl:value-of select="concat(nazwa,'&#xA;')" />
-    <xsl:value-of select="concat('Liczba samochodów:&#x9;&#x9;',liczba_samochodow,'&#xA;')" />
-    <xsl:value-of select="concat('Średnia cena wypożyczenia:&#x9;',średnia_cena_wypożyczenia,'&#xA;')" />
-    <xsl:value-of select="concat('Średni przebieg:&#x9;&#x9;',średni_przebieg,'&#xA;')" />
-    <xsl:value-of select="concat('Średni wiek:&#x9;&#x9;&#x9;',średni_wiek,'&#xA;&#xA;')" />
+    
+    <xsl:text>Liczba samochodów:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Liczba samochodów:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(liczba_samochodow,'&#xA;')" />
+    
+    <xsl:text>Średnia cena wypożyczenia</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Średnia cena wypożyczenia')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(średnia_cena_wypożyczenia,'&#xA;')" />
+    
+    <xsl:text>Średni przebieg:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Średni przebieg:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(średnia_cena_wypożyczenia,'&#xA;')" />
+    
+    <xsl:text>Średni wiek:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Średni wiek:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(średni_wiek,'&#xA;&#xA;')" />
   </xsl:template>
 
   <xsl:template match="/wypożyczalnia/wypożyczenia/wypożyczenie">
-    <xsl:value-of select="concat('Samochód:&#x9;&#x9;&#x9;',samochod,'&#xA;')" />
-    <xsl:value-of select="concat('Pracownik:&#x9;&#x9;&#x9;',pracownik,'&#xA;')" />
-    <xsl:value-of select="concat('Data wypożyczenia:&#x9;&#x9;',data_wypożyczenia,'&#xA;')" />
-    <xsl:value-of select="concat('Data zwrotu:&#x9;&#x9;&#x9;',data_zwrotu,'&#xA;')" />
-    <xsl:value-of select="concat('Wypożyczający:&#x9;&#x9;&#x9;',wypożyczający,'&#xA;&#xA;')" />
+    
+    <xsl:text>Samochód:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Samochód:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(samochod,'&#xA;')" />
+    
+    <xsl:text>Pracownik:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Pracownik:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(pracownik,'&#xA;')" />
+    
+    <xsl:text>Data wypożyczenia:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Data wypożyczenia:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(data_wypożyczenia,'&#xA;')" />
+    
+    <xsl:text>Data zwrotu:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Data zwrotu:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(data_zwrotu,'&#xA;')" />
+
+    <xsl:text>Wypożyczający:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Wypożyczający:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(wypożyczający,'&#xA;&#xA;')" />
   </xsl:template>
 
   <xsl:template match="/wypożyczalnia/autorzy/autor">
-    <xsl:value-of select="concat('Imie:&#x9;&#x9;&#x9;&#x9;',imie,'&#xA;')" />
-    <xsl:value-of select="concat('Nazwisko:&#x9;&#x9;&#x9;',nazwisko,'&#xA;&#xA;')" />
+    <xsl:text>Imie:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Imie:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(imie,'&#xA;')" />
+
+    <xsl:text>Nazwisko:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Nazwisko:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(nazwisko,'&#xA;&#xA;')" />
   </xsl:template>
 
   <xsl:template match="/wypożyczalnia/data_raportu">
-    <xsl:value-of select="concat('&#x9;&#x9;&#x9;',.,'&#xA;')" />
+    <xsl:text>Data Raportu:</xsl:text>
+    <xsl:call-template name="wyswietlSpacje">
+      <xsl:with-param name="ilosc" select="30 - string-length('Data Raportu:')"/>
+    </xsl:call-template>
+    <xsl:value-of select="concat(.,'&#xA;')" />
+  </xsl:template>
+
+  <xsl:template name="wyswietlSpacje" >
+    <xsl:param name="ilosc"/>
+    <xsl:if test="$ilosc > 0">
+      <xsl:text> </xsl:text>
+      <xsl:call-template name="wyswietlSpacje">
+        <xsl:with-param name="ilosc" select="$ilosc - 1"/>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
