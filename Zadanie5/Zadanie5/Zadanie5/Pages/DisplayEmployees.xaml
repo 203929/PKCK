@@ -9,7 +9,7 @@
       Title="DisplayEmployees"
       DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
     <ScrollViewer Margin="10">
-        <ListView ItemsSource="{Binding RentalCars.usługi.pracownicy}">
+        <ListView ItemsSource="{Binding RentalCars.usługi.pracownicy}" SelectedIndex="{Binding SelectedEmployee}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10">

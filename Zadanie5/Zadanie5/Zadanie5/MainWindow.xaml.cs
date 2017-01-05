@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zadanie5.Pages;
+using Zadanie5.ViewModel;
 
 namespace Zadanie5
 {
@@ -20,12 +22,55 @@ namespace Zadanie5
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel _vm;
         public MainWindow()
         {
             InitializeComponent();
             carFrame.Navigate(new DisplayCars());
             employeesFrame.Navigate(new DisplayEmployees());
             rentalsFrame.Navigate(new DisplayRentals());
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            _vm = DataContext as MainViewModel;
+        }
+
+        //For some reason binding it's not working
+
+        private void DeleteCar(object sender, RoutedEventArgs e)
+        {
+            _vm.DeleteCarCommand.Execute(null);
+        }
+
+        private void DeleteRental(object sender, RoutedEventArgs e)
+        {
+            _vm.DeleteRentalCommand.Execute(null);
+        }
+
+        private void DeleteEmployee(object sender, RoutedEventArgs e)
+        {
+            _vm.DeleteEmployeeCommand.Execute(null);
+        }
+
+        private void AddCar(object sender, RoutedEventArgs e)
+        {
+            carFrame.Navigate(new AddCar());
+            //_vm.AddCarCommand.Execute(null);
+        }
+
+        private void AddRental(object sender, RoutedEventArgs e)
+        {
+            rentalsFrame.Navigate(new AddRental());
+            //_vm.AddRentalCommand.Execute(null);
+        }
+
+        private void AddEmployee(object sender, RoutedEventArgs e)
+        {
+            employeesFrame.Navigate(new AddEmployee());
+            //_vm.AddEmployeeCommand.Execute(null);
         }
     }
 }

@@ -29,9 +29,9 @@
                     <DockPanel Margin="7">
                         <Grid Margin="7" DockPanel.Dock="Top">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Button Command="{x:Static NavigationCommands.BrowseBack}" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}" />
-                                <Button Command="" Content="Add" Width="50" Margin="10,0"/>
-                                <Button Command="{Binding DeleteCar}" Content="Delete" Width="75" Margin="10,0"/>
+                                <Button Command="{x:Static NavigationCommands.BrowseBack}" Margin="10,0" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                <Button Content="Add" Width="50" Margin="10,0" Click="AddCar"/>
+                                <Button Content="Delete" Width="75" Margin="10,0" Click="DeleteCar"/>
                             </StackPanel>
                             <TextBlock FontWeight="Bold" FontSize="14" Text="Samochody" HorizontalAlignment="Left"/>
                         </Grid>
@@ -46,8 +46,12 @@
             <Frame.Template>
                 <ControlTemplate TargetType="Frame">
                     <DockPanel Margin="7">
-                        <Grid Margin="7" HorizontalAlignment="Left" DockPanel.Dock="Top">
-                            <Button Command="{x:Static NavigationCommands.BrowseBack}" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                        <Grid Margin="7" DockPanel.Dock="Top">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Command="{x:Static NavigationCommands.BrowseBack}" Margin="10,0" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                <Button Content="Add" Width="50" Margin="10,0" Click="AddRental"/>
+                                <Button Content="Delete" Width="75" Margin="10,0" Click="DeleteRental"/>
+                            </StackPanel>
                             <TextBlock FontWeight="Bold" FontSize="14" Text="Wypożyczenia" HorizontalAlignment="Left"/>
                         </Grid>
                         <Border BorderBrush="Black" Margin="7" BorderThickness="2" Padding="7" CornerRadius="2">
@@ -61,8 +65,12 @@
             <Frame.Template>
                 <ControlTemplate TargetType="Frame">
                     <DockPanel Margin="7">
-                        <Grid Margin="7" HorizontalAlignment="Left" DockPanel.Dock="Top">
-                            <Button Command="{x:Static NavigationCommands.BrowseBack}" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                        <Grid Margin="7" DockPanel.Dock="Top">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Command="{x:Static NavigationCommands.BrowseBack}" Margin="10,0" Content="Back" Width="50" Visibility="{TemplateBinding CanGoBack, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                <Button Content="Add" Width="50" Margin="10,0" Click="AddEmployee"/>
+                                <Button Content="Delete" Width="75" Margin="10,0" Click="DeleteEmployee"/>
+                            </StackPanel>
                             <TextBlock FontWeight="Bold" FontSize="14" Text="Pracownicy" HorizontalAlignment="Left"/>
                         </Grid>
                         <Border BorderBrush="Black" Margin="7" BorderThickness="2" Padding="7" CornerRadius="2">

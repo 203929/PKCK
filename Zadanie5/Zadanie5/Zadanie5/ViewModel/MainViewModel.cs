@@ -41,8 +41,34 @@ namespace Zadanie5.ViewModel
                 if(value != _selectedCar)
                 {
                     _selectedCar = value;
-                    RaisePropertyChanged("SelectedCar")
-;                }
+                    RaisePropertyChanged("SelectedCar");
+                }
+            }
+        }
+
+        public int SelectedRental
+        {
+            get { return _selectedRental; }
+            set
+            {
+                if (value != _selectedRental)
+                {
+                    _selectedRental = value;
+                    RaisePropertyChanged("SelectedCar");
+                }
+            }
+        }
+
+        public int SelectedEmployee
+        {
+            get { return _selectedEmployee; }
+            set
+            {
+                if (value != _selectedEmployee)
+                {
+                    _selectedEmployee = value;
+                    RaisePropertyChanged("SelectedCar");
+                }
             }
         }
         /// <summary>
@@ -54,6 +80,8 @@ namespace Zadanie5.ViewModel
             RentalCars = (wypo¿yczalnia)serializer.Deserialize(new XmlTextReader("../../Documents/zadanie5.xml"));
 
             SelectedCar = -1;
+            SelectedEmployee = -1;
+            SelectedRental = -1;
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.
@@ -64,15 +92,50 @@ namespace Zadanie5.ViewModel
             ////}
         }
 
-        public ICommand DeleteCar => _deleteCar ?? (_deleteCar = new RelayCommand(() => 
+        public ICommand DeleteCarCommand => _deleteCarCommand ?? (_deleteCarCommand = new RelayCommand(() => 
         {
-            //TODO: zamieniæ tablice na jak¹œ sensown¹ liste a nie jakieœ gunwo
+            if(SelectedCar > -1)
+                RentalCars.samochody.RemoveAt(SelectedCar);
         }));
 
-        private ICommand _deleteCar;
+        public ICommand AddCarCommand => _addCarCommand ?? (_addCarCommand = new RelayCommand(() =>
+        {
+            //
+        }));
+        
+        public ICommand DeleteRentalCommand => _deleteRentalCommand ?? (_deleteRentalCommand = new RelayCommand(() =>
+        {
+            if (SelectedRental > -1)
+                RentalCars.us³ugi.wypo¿yczenia.RemoveAt(SelectedRental);
+        }));
+        
+        public ICommand AddRentalCommand => _addRentalCommand ?? (_addRentalCommand = new RelayCommand(() =>
+        {
+            //
+        }));
+        
+        public ICommand DeleteEmployeeCommand => _deleteEmployeeCommand ?? (_deleteEmployeeCommand = new RelayCommand(() =>
+        {
+            if (SelectedEmployee > -1)
+                RentalCars.us³ugi.pracownicy.RemoveAt(SelectedEmployee);
+        }));
+        
+        public ICommand AddEmployeeCommand => _addEmployeeCommand ?? (_addEmployeeCommand = new RelayCommand(() =>
+        {
+            //
+        }));
+
+        private ICommand _deleteCarCommand;
+        private ICommand _addCarCommand;
+        private ICommand _deleteRentalCommand;
+        private ICommand _addRentalCommand;
+        private ICommand _deleteEmployeeCommand;
+        private ICommand _addEmployeeCommand;
 
         private wypo¿yczalnia _rentalCars;
 
         private int _selectedCar;
+        private int _selectedRental;
+        private int _selectedEmployee;
     }
 }

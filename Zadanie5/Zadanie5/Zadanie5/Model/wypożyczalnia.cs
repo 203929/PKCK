@@ -1,4 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Xml.Serialization;
 
 /// <remarks/>
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
@@ -8,7 +10,7 @@ public partial class wypożyczalnia
 
     private wypożyczalniaOpis opisField;
 
-    private wypożyczalniaSamochód[] samochodyField;
+    private ObservableCollection<wypożyczalniaSamochód> samochodyField;
 
     private wypożyczalniaUsługi usługiField;
 
@@ -27,7 +29,7 @@ public partial class wypożyczalnia
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("samochód", IsNullable = false)]
-    public wypożyczalniaSamochód[] samochody
+    public ObservableCollection<wypożyczalniaSamochód> samochody
     {
         get
         {
@@ -60,7 +62,7 @@ public partial class wypożyczalniaOpis
 
     private string tematField;
 
-    private wypożyczalniaOpisAutor[] autorzyField;
+    private ObservableCollection<wypożyczalniaOpisAutor> autorzyField;
 
     /// <remarks/>
     public string temat
@@ -77,7 +79,7 @@ public partial class wypożyczalniaOpis
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("autor", IsNullable = false)]
-    public wypożyczalniaOpisAutor[] autorzy
+    public ObservableCollection<wypożyczalniaOpisAutor> autorzy
     {
         get
         {
@@ -425,13 +427,13 @@ public partial class wypożyczalniaSamochódCena_wypożyczenia_za_1_dzien
 public partial class wypożyczalniaUsługi
 {
 
-    private wypożyczalniaUsługiPracownik[] pracownicyField;
+    private ObservableCollection<wypożyczalniaUsługiPracownik> pracownicyField;
 
-    private wypożyczalniaUsługiWypożyczenie[] wypożyczeniaField;
+    private ObservableCollection<wypożyczalniaUsługiWypożyczenie> wypożyczeniaField;
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("pracownik", IsNullable = false)]
-    public wypożyczalniaUsługiPracownik[] pracownicy
+    public ObservableCollection<wypożyczalniaUsługiPracownik> pracownicy
     {
         get
         {
@@ -445,7 +447,7 @@ public partial class wypożyczalniaUsługi
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("wypożyczenie", IsNullable = false)]
-    public wypożyczalniaUsługiWypożyczenie[] wypożyczenia
+    public ObservableCollection<wypożyczalniaUsługiWypożyczenie> wypożyczenia
     {
         get
         {
