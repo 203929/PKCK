@@ -182,12 +182,12 @@
 			<wypożyczenie id_pracownika="JK1" id_samochodu="CH1">
 				<data_wypożyczenia>2016-10-03</data_wypożyczenia>
 				<data_zwrotu>2016-11-11</data_zwrotu>
-				<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="512-324-456"/>
+				<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="EL 23456"/>
 			</wypożyczenie>
 			<wypożyczenie id_pracownika="AG1" id_samochodu="MF1">
 				<data_wypożyczenia>2016-08-21</data_wypożyczenia>
 				<data_zwrotu>2016-12-12</data_zwrotu>
-				<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="756-459-785"/>
+				<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="EL 2345A"/>
 			</wypożyczenie>
 		</wypożyczenia>
 	</usługi>

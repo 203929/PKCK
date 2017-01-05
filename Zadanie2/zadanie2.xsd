@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/typy" xmlns:typy="http://www.example.org/typy" elementFormDefault="qualified" >
   <xs:element name="wypożyczalnia">
+
     <xs:complexType>
       <xs:sequence>
         <xs:element name="opis">
@@ -207,7 +208,7 @@
 
   <xs:simpleType name="nr_telefonu">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
+      <xs:pattern value="EL [0-9]{4}([0-9]|[A-Z])"/>
     </xs:restriction>
   </xs:simpleType>
 
