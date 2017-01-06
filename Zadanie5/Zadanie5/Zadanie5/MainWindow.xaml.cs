@@ -58,19 +58,34 @@ namespace Zadanie5
         private void AddCar(object sender, RoutedEventArgs e)
         {
             carFrame.Navigate(new AddCar());
-            //_vm.AddCarCommand.Execute(null);
         }
 
         private void AddRental(object sender, RoutedEventArgs e)
         {
             rentalsFrame.Navigate(new AddRental());
-            //_vm.AddRentalCommand.Execute(null);
         }
 
         private void AddEmployee(object sender, RoutedEventArgs e)
         {
             employeesFrame.Navigate(new AddEmployee());
-            //_vm.AddEmployeeCommand.Execute(null);
+        }
+
+        private void ConfirmCar(object sender, RoutedEventArgs e)
+        {
+            _vm.AddCarCommand.Execute(null);
+            carFrame.GoBack();
+        }
+
+        private void ConfirmRental(object sender, RoutedEventArgs e)
+        {
+            _vm.AddRentalCommand.Execute(null);
+            rentalsFrame.GoBack();
+        }
+
+        private void ConfirmEmployee(object sender, RoutedEventArgs e)
+        {
+            _vm.AddEmployeeCommand.Execute(null);
+            employeesFrame.GoBack();
         }
     }
 }

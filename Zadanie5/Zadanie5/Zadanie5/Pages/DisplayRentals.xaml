@@ -9,7 +9,7 @@
       Title="DisplayRentals"
       DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
     <ScrollViewer Margin="10">
-        <ListView ItemsSource="{Binding RentalCars.usługi.wypożyczenia}" SelectedIndex="{Binding SelectedRental}">
+        <ListView ItemsSource="{Binding CarRental.usługi.wypożyczenia}" SelectedIndex="{Binding SelectedRental}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10">
@@ -38,6 +38,11 @@
                             <Run FontWeight="Bold" Text="Samochód" />
                             <Run Text=" " />
                             <Run Text="{Binding id_samochodu}" />
+                        </TextBlock>
+                        <TextBlock>
+                            <Run FontWeight="Bold" Text="Pracownik odpowiedzialny" />
+                            <Run Text=" " />
+                            <Run Text="{Binding id_pracownika}" />
                         </TextBlock>
                     </StackPanel>
                 </DataTemplate>

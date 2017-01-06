@@ -6,9 +6,27 @@
       xmlns:local="clr-namespace:Zadanie5.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="AddRental">
-
-    <Grid>
-        
-    </Grid>
+      Title="AddRental"
+      DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="Id pracownika"/>
+            <ComboBox Text="{Binding NewRental.id_pracownika}" ItemsSource="{Binding AvailableEmployeesIdexes}"/>
+            <TextBlock Text="Id samochodu"/>
+            <ComboBox Text="{Binding NewRental.id_samochodu}" ItemsSource="{Binding AvailableCarsIdexes}"/>
+            <TextBlock Text="Data wypożyczenia"/>
+            <TextBox Text="{Binding NewRental.data_wypożyczenia}"/>
+            <TextBlock Text="Data zwrotu"/>
+            <TextBox Text="{Binding NewRental.data_zwrotu}"/>
+            <TextBlock Text="Wypożyczający" FontWeight="Heavy"/>
+            <TextBlock Text="Imie"/>
+            <TextBox Text="{Binding NewRental.wypożyczający.imie}"/>
+            <TextBlock Text="Nazwisko"/>
+            <TextBox Text="{Binding NewRental.wypożyczający.nazwisko}"/>
+            <TextBlock Text="Pesel"/>
+            <TextBox Text="{Binding NewRental.wypożyczający.pesel}"/>
+            <TextBlock Text="Numer Telefonu"/>
+            <TextBox Text="{Binding NewRental.wypożyczający.nr_telefonu}"/>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

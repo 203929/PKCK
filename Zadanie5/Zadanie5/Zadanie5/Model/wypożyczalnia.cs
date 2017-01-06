@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 
 /// <remarks/>
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-[System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-public partial class wypożyczalnia
+[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.example.org/typy", IsNullable = false, ElementName = "wypożyczalnia")]
+public partial class CarRental
 {
 
     private wypożyczalniaOpis opisField;

@@ -6,9 +6,27 @@
       xmlns:local="clr-namespace:Zadanie5.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="AddCar">
+      Title="AddCar"
+      DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="Marka"/>
+            <TextBox Text="{Binding NewCar.nazwa.marka}"/>
+            <TextBlock Text="Model"/>
+            <TextBox Text="{Binding NewCar.nazwa.model}"/>
+            <TextBlock Text="Generacja"/>
+            <TextBox Text="{Binding NewCar.nazwa.generacja}"/>
+            <TextBlock Text="Przebieg"/>
+            <TextBox Text="{Binding NewCar.przebieg}"/>
+            <TextBlock Text="Rok produkcji"/>
+            <TextBox Text="{Binding NewCar.rok_produkcji}"/>
+            <TextBlock Text="Kolor"/>
+            <TextBox Text="{Binding NewCar.kolor}"/>
+            <TextBlock Text="Miasto"/>
+            <TextBox Text="{Binding NewCar.miasto}"/>
+            <TextBlock Text="Koszt wypożyczenia na jeden dzień"/>
+            <TextBox Text="{Binding NewCar.cena_wypożyczenia_za_1_dzien}"/>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

@@ -1,65 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="zadanie1.css"?>
-<!DOCTYPE wypożyczalnia [
-<!ENTITY % miasta "(Łódź|Warszawa|Wrocław)">
-<!ENTITY % jednostki "(km|mil)">
-<!ENTITY % waluty "(PLN)">
-
-
-<!ELEMENT wypożyczalnia (opis,samochody,usługi)>
-
-<!ELEMENT opis (temat,autorzy)>
-<!ELEMENT temat (#PCDATA)>
-<!ELEMENT autorzy (autor+)>
-
-<!ELEMENT autor EMPTY>
-<!ATTLIST autor imie CDATA #REQUIRED>
-<!ATTLIST autor nazwisko CDATA #REQUIRED>
-<!ATTLIST autor nr_indeksu CDATA #REQUIRED>
-
-<!ELEMENT samochody (samochód+)>
-<!ELEMENT samochód (nazwa,przebieg,rok_produkcji,kolor,czy_wypożyczone,miasto,cena_wypożyczenia_za_1_dzien)>
-<!ATTLIST samochód id ID #REQUIRED>
-<!ELEMENT nazwa (model,marka,generacja?)>
-<!ELEMENT model (#PCDATA)>
-<!ELEMENT marka (#PCDATA)>
-<!ELEMENT generacja (#PCDATA)>
-<!ELEMENT przebieg (#PCDATA)>
-
-<!ATTLIST przebieg jednostka (km|mil) #REQUIRED>
-<!ELEMENT rok_produkcji (#PCDATA)>
-<!ELEMENT kolor (#PCDATA)>
-<!ELEMENT czy_wypożyczone (#PCDATA)>
-<!ELEMENT cena_wypożyczenia_za_1_dzien (#PCDATA)>
-<!ATTLIST cena_wypożyczenia_za_1_dzien waluta (PLN) #REQUIRED>
-<!ELEMENT miasto EMPTY>
-<!ATTLIST miasto miasto (Łódź|Warszawa|Wrocław) #REQUIRED>
-
-
-<!ELEMENT usługi (pracownicy,wypożyczenia)>
-
-
-<!ELEMENT pracownicy (pracownik+)>
-<!ELEMENT pracownik (imie,nazwisko)>
-<!ATTLIST pracownik id ID #REQUIRED>
-<!ELEMENT imie (#PCDATA)>
-<!ELEMENT nazwisko (#PCDATA)>
-
-<!ELEMENT wypożyczenia (wypożyczenie)+>
-<!ELEMENT wypożyczenie (data_wypożyczenia,data_zwrotu,wypożyczający)>
-<!ATTLIST wypożyczenie id_pracownika IDREF #REQUIRED>
-<!ATTLIST wypożyczenie id_samochodu IDREF #REQUIRED>
-<!ELEMENT data_wypożyczenia (#PCDATA)>
-<!ELEMENT data_zwrotu (#PCDATA)>
-<!ELEMENT wypożyczający EMPTY>
-<!ATTLIST wypożyczający imie CDATA #REQUIRED>
-<!ATTLIST wypożyczający nazwisko CDATA #REQUIRED>
-<!ATTLIST wypożyczający pesel CDATA #REQUIRED>
-<!ATTLIST wypożyczający nr_telefonu CDATA #REQUIRED>
-
-
-]>
-<wypożyczalnia>
+<wypożyczalnia xmlns="http://www.example.org/typy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/typy zadanie5.xsd">
 	<opis>
 		<temat>Wypożyczalnia Samochodowa</temat>
 		<autorzy>
@@ -240,14 +180,14 @@
 		</pracownicy>
 		<wypożyczenia>
 			<wypożyczenie id_pracownika="JK1" id_samochodu="CH1">
-				<data_wypożyczenia>03.10.2016</data_wypożyczenia>
-				<data_zwrotu>11.11.2016</data_zwrotu>
-				<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="512-324-456"/>
+				<data_wypożyczenia>2016-10-03</data_wypożyczenia>
+				<data_zwrotu>2016-11-11</data_zwrotu>
+				<wypożyczający imie="Michał" nazwisko="Nowak" pesel="96040705623" nr_telefonu="123-456-789"/>
 			</wypożyczenie>
 			<wypożyczenie id_pracownika="AG1" id_samochodu="MF1">
-				<data_wypożyczenia>21.8.2016</data_wypożyczenia>
-				<data_zwrotu>12.12.2016</data_zwrotu>
-				<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="756-459-785"/>
+				<data_wypożyczenia>2016-08-21</data_wypożyczenia>
+				<data_zwrotu>2016-12-12</data_zwrotu>
+				<wypożyczający imie="Piotr" nazwisko="Borowski" pesel="91030405923" nr_telefonu="987-654-321"/>
 			</wypożyczenie>
 		</wypożyczenia>
 	</usługi>

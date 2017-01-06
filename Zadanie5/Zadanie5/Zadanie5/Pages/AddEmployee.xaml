@@ -6,9 +6,15 @@
       xmlns:local="clr-namespace:Zadanie5.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="AddEmployee">
+      Title="AddEmployee"
+      DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="Imie"/>
+            <TextBox Text="{Binding NewEmployee.imie}"/>
+            <TextBlock Text="Nazwisko"/>
+            <TextBox Text="{Binding NewEmployee.nazwisko}"/>
+        </StackPanel>
+    </ScrollViewer>
 </Page>
